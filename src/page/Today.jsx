@@ -1,3 +1,6 @@
+import { render } from "@testing-library/react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Today() {
@@ -30,13 +33,31 @@ function Today() {
     return parseInt(Math.random() * length);
   };
 
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     text: "tarot",
+  //   };
+  // }
+
+  // changeText = () =>{
+  //   this.setState({
+  //     text: tarot72[getRandomTarot(tarot72.length)]},
+  //   });
+  // }
+
   return (
     <Container>
       <TarotPlate>
-        카드 뒷면을 누르면 타로가 하나 나옴. 섞이는 모션이 있으면 좋겠음. 기기?
-        아이피? 별로 하루에 한 장 고정 되도록 노력
-        {getRandomTarot(tarot72.length)}
-        <TarotButton>버튼</TarotButton>
+        카드 뒷면을 누르면 타로가 하나 나옴(임시로 버튼으로 대신). 섞이는 모션이
+        있으면 좋겠음. 기기? 아이피? 별로 하루에 한 장 고정 되도록 노력
+        <br />
+        {tarot72[getRandomTarot(tarot72.length)]}
+        <br />
+        <Link to="/today">
+          <TarotButton>버튼</TarotButton>
+        </Link>
       </TarotPlate>
     </Container>
   );
@@ -60,6 +81,7 @@ const TarotPlate = styled.div`
 
 const TarotButton = styled.div`
   margin: auto;
+  text-align: center;
 
   width: 5vh;
   border-radius: 50%;
