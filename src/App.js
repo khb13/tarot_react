@@ -2,8 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "./components/Menu";
 import Home from "./page/Home";
+import Login from "./page/Login";
 import Qna from "./page/Qna";
 import Ques from "./page/Ques";
+import Result from "./page/Result";
+import SignUp from "./page/SignUp";
 import Today from "./page/Today";
 
 function App() {
@@ -15,8 +18,11 @@ function App() {
           <Route path="/*" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="today" element={<Today />} />
+          <Route path="result" element={<Result />} />
           <Route path="/question" element={<Ques />} />
           <Route path="/qna" element={<Qna />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Wrapper>
     </Container>

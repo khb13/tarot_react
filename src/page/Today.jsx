@@ -1,62 +1,22 @@
-import { render } from "@testing-library/react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Today() {
-  const tarot72 = [
-    "0.The Fool",
-    "1.The Magician",
-    "2.The High Priestess",
-    "03.The Empress",
-    "04.The Emperor",
-    "05.The Hierophant",
-    "06.The Lovers",
-    "07.The Chariot",
-    "08.Strength",
-    "09.The Hermit",
-    "10.Wheel of Fortune",
-    "11.Justice",
-    "12.The Hanged Man",
-    "13.Death",
-    "14.Temperance",
-    "15.The Devil",
-    "16.The Tower",
-    "17.The Star",
-    "18.The Moon",
-    "19.The Sun",
-    "20.Judgement",
-    "21.The World",
-  ];
-
-  const getRandomTarot = function (length) {
-    return parseInt(Math.random() * length);
-  };
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     text: "tarot",
-  //   };
-  // }
-
-  // changeText = () =>{
-  //   this.setState({
-  //     text: tarot72[getRandomTarot(tarot72.length)]},
-  //   });
-  // }
-
   return (
     <Container>
       <TarotPlate>
-        카드 뒷면을 누르면 타로가 하나 나옴(임시로 버튼으로 대신). 섞이는 모션이
-        있으면 좋겠음. 기기? 아이피? 별로 하루에 한 장 고정 되도록 노력
-        <br />
-        {tarot72[getRandomTarot(tarot72.length)]}
-        <br />
-        <Link to="/today">
-          <TarotButton>버튼</TarotButton>
+        <InfoTarot>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+          voluptatem quibusdam recusandae mollitia. Quam, perspiciatis impedit.
+        </InfoTarot>
+
+        <Link to="../result">
+          {/* <div onClick={() => changeTarot()}> */}
+          <TarotButton>
+            <InButton>Select</InButton>
+          </TarotButton>
+          {/* </div> */}
         </Link>
       </TarotPlate>
     </Container>
@@ -79,13 +39,39 @@ const TarotPlate = styled.div`
   color: black;
 `;
 
+const InfoTarot = styled.div`
+  width: 46vh;
+
+  font-size: 0.7rem;
+
+  padding: 10px;
+`;
+
 const TarotButton = styled.div`
   margin: auto;
   text-align: center;
 
-  width: 5vh;
-  border-radius: 50%;
-  background-color: orange;
+  width: 20vh;
+  height: 30vh;
+  border-radius: 5%;
+  border: 3px solid #fff;
+  background-color: #ddd;
+
+  user-select: none;
+
+  box-shadow: 5px 5px grey;
+`;
+
+const InButton = styled.div`
+  padding-top: 13vh;
+  margin: auto;
+
+  font-size: 1.2rem;
+
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
 `;
 
 export default Today;

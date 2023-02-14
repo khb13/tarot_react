@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { GiOrangeSlice } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
+import { useState } from "react";
 
 function Menu() {
+  const [dropdownVisibility, setDropdownVisibility] = useState(false);
+
   return (
     <Container>
       <NavWrapper>
@@ -12,14 +16,31 @@ function Menu() {
           </Link>
         </Logo>
         <WrapMenu>
+          <TarotButton
+            onClick={(e) => setDropdownVisibility(!dropdownVisibility)}
+          >
+            {dropdownVisibility ? "◆◆의 타로" : "◆◆의 타로"}
+          </TarotButton>
+          <Dropdown visibility={dropdownVisibility}>
+            <ul>
+              <li>오늘의 타로</li>
+              <li>이번 주의 타로</li>
+              <li>이 달의 타로</li>
+              <li>올해의 타로</li>
+            </ul>
+          </Dropdown>
+
           <Link to="/today">
-            <CommonTarot>오늘의 타로</CommonTarot>
+            <CommonTarot>◆◆의 타로</CommonTarot>
           </Link>
           <Link to="/question">
             <PersonalTarot>타로 문의</PersonalTarot>
           </Link>
           <Link to="/qna">
             <QuesAns>기타·질문</QuesAns>
+          </Link>
+          <Link to="/login">
+            <Login>로그인</Login>
           </Link>
         </WrapMenu>
       </NavWrapper>
@@ -33,6 +54,7 @@ const Container = styled.div`
   margin: 10px;
 
   width: 60vh;
+  height: 7vh;
 
   display: flex;
   align-items: center;
@@ -59,37 +81,47 @@ const WrapMenu = styled.div`
   padding-bottom: 5px;
 `;
 
-const CommonTarot = styled.li`
+const TarotButton = styled.div`
   margin-right: 20px;
   color: black;
-  padding: 5px 0px;
 
   :hover {
     color: #aaa;
-    font-size: 1rem;
+  }
+`;
+
+const CommonTarot = styled.li`
+  margin-right: 20px;
+  color: black;
+
+  :hover {
+    color: #aaa;
   }
 `;
 
 const PersonalTarot = styled.li`
   margin-right: 20px;
   color: black;
-  padding: 5px 0px;
 
   :hover {
-    color: #fff;
-    font-size: 1rem;
-
-    background-color: #999;
+    color: #aaa;
   }
 `;
 
 const QuesAns = styled.li`
   color: black;
-  padding: 5px 0px;
+  margin-right: 20px;
 
   :hover {
     color: #aaa;
-    font-size: 1rem;
+  }
+`;
+
+const Login = styled.li`
+  color: black;
+
+  :hover {
+    color: #aaa;
   }
 `;
 

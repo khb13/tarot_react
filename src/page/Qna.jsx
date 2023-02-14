@@ -19,7 +19,7 @@ function Qna() {
 }
 
 const Container = styled.div`
-  background-color: #ddd;
+  background-color: #eee;
   width: 50vh;
   justify-content: center;
   align-items: center;

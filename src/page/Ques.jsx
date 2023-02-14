@@ -85,6 +85,7 @@ const UserName = styled.input`
   border: none;
 
   color: #aaa;
+  font-size: 0.8rem;
 `;
 
 const QuesTitle = styled.input`
