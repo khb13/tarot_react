@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "./components/Menu";
+import FindId from "./page/FindId";
 import Home from "./page/Home";
 import Login from "./page/Login";
+import Profile from "./page/Profile";
 import Qna from "./page/Qna";
 import Ques from "./page/Ques";
 import Result from "./page/Result";
@@ -23,6 +25,8 @@ function App() {
           <Route path="/qna" element={<Qna />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="findid" element={<FindId />} />
         </Routes>
       </Wrapper>
     </Container>
