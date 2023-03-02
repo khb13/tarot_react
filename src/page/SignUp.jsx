@@ -8,6 +8,7 @@ function SignUp() {
           <SignUpTarot>
             <h3>회원가입</h3>
             <input placeholder="닉네임"></input>
+            <input placeholder="이메일" type="email"></input>
             <input placeholder="아이디"></input>
             <input placeholder="비밀번호" type="password"></input>
             <input placeholder="비밀번호 확인" type="password"></input>
@@ -29,7 +30,7 @@ const Container = styled.div`
 
 const SignSheet = styled.div`
   width: 50vh;
-  height: 35vh;
+  height: 40vh;
 
   background-color: #eee;
   color: black;

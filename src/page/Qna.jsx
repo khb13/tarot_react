@@ -13,6 +13,7 @@ function Qna() {
         <QnaTitle placeholder="문의 제목"></QnaTitle>
         <QnaCustomer type="input" readOnly value={"유저 닉네임"}></QnaCustomer>
         <QnaText placeholder="문의 내용"></QnaText>
+        <QnaSubmit>제출</QnaSubmit>
       </QnaForm>
     </Container>
   );
@@ -69,6 +70,21 @@ const QnaText = styled.textarea`
   font-size: 0.8rem;
 
   padding: 5px;
+`;
+
+const QnaSubmit = styled.div`
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15%;
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  width: 5vh;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export default Qna;

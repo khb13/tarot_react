@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "./components/Menu";
 import FindId from "./page/FindId";
+import FindPass from "./page/FindPass";
 import Home from "./page/Home";
 import Login from "./page/Login";
 import Profile from "./page/Profile";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="profile" element={<Profile />} />
           <Route path="findid" element={<FindId />} />
+          <Route path="findpass" element={<FindPass />} />
         </Routes>
       </Wrapper>
     </Container>

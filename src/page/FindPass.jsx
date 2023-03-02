@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-function FindId() {
+function FindPass() {
   return (
     <Container>
-      <FindIdSheet>
-        <FindIdTitle>아이디 찾기</FindIdTitle>
-        <FindIdForm>
-          <input placeholder="이름" type="text"></input>
+      <FindPassSheet>
+        <FindPassTitle>비밀번호 찾기</FindPassTitle>
+        <FindPassForm>
+          <input placeholder="아이디"></input>
           <br />
-          <input placeholder="이메일" type="email"></input>
-          <FindIdButton>제출</FindIdButton>
-        </FindIdForm>
-      </FindIdSheet>
+          <input placeholder="이메일"></input>
+          <FindPassButton>제출</FindPassButton>
+        </FindPassForm>
+      </FindPassSheet>
     </Container>
   );
 }
@@ -29,7 +29,7 @@ const Container = styled.div`
   margin-top: 15vh;
 `;
 
-const FindIdSheet = styled.div`
+const FindPassSheet = styled.div`
   width: 50vh;
   height: 20vh;
   color: black;
@@ -37,7 +37,7 @@ const FindIdSheet = styled.div`
   margin: 20px 0px;
 `;
 
-const FindIdTitle = styled.div`
+const FindPassTitle = styled.div`
   font-size: 1.2rem;
   font-weight: bold;
 
@@ -45,7 +45,7 @@ const FindIdTitle = styled.div`
   text-align: center;
 `;
 
-const FindIdForm = styled.form`
+const FindPassForm = styled.form`
   margin: 20px;
   text-align: center;
 
@@ -56,7 +56,7 @@ const FindIdForm = styled.form`
   }
 `;
 
-const FindIdButton = styled.div`
+const FindPassButton = styled.div`
   margin: 20px auto;
   font-size: 0.8rem;
   border: 1px solid #ddd;
@@ -66,4 +66,4 @@ const FindIdButton = styled.div`
   text-align: center;
   cursor: pointer;
 `;
-export default FindId;
+export default FindPass;
