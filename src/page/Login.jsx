@@ -32,7 +32,7 @@ function Login() {
 }
 
 const Container = styled.div`
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
 
@@ -51,6 +51,8 @@ const LoginSheet = styled.div`
     padding: 5px;
     margin-top: 10px;
   }
+
+  margin: 0px auto
 `;
 
 const LoginTarot = styled.div`

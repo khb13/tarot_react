@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Menu from "./components/Menu";
+import Editprofile from "./page/Editprofile";
 import FindId from "./page/FindId";
 import FindPass from "./page/FindPass";
 import Home from "./page/Home";
@@ -29,6 +30,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="findid" element={<FindId />} />
           <Route path="findpass" element={<FindPass />} />
+          <Route path="editprofile" element={<Editprofile />} />
         </Routes>
       </Wrapper>
     </Container>

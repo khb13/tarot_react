@@ -13,7 +13,7 @@ function SignUp() {
             <input placeholder="비밀번호" type="password"></input>
             <input placeholder="비밀번호 확인" type="password"></input>
           </SignUpTarot>
-          <SignUpButton>로그인</SignUpButton>
+          <SignUpButton>회원가입</SignUpButton>
         </form>
       </SignSheet>
     </Container>
@@ -61,7 +61,7 @@ const SignUpTarot = styled.div`
 
 const SignUpButton = styled.div`
   border: 1px solid #ddd;
-  max-width: 7vh;
+  max-width: 10vh;
 
   margin: auto;
   margin-bottom: 10px;

@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown";
 import { useState } from "react";
 
 function Menu() {
-  const [dropdownVisibility, setDropdownVisibility] = useState(false);
+  const [view, setView] = useState(false);
 
   return (
     <Container>
@@ -17,22 +17,11 @@ function Menu() {
         </Logo>
         <WrapMenu>
           <TarotButton
-            onClick={(e) => setDropdownVisibility(!dropdownVisibility)}
-          >
-            {dropdownVisibility ? "◆◆의 타로" : "◆◆의 타로"}
+            onClick={() => {setView(!view)}}
+          >타로 {" "}
+          {view ? '▲' : '▼'}
+          {view && <Dropdown />}
           </TarotButton>
-          <Dropdown visibility={dropdownVisibility}>
-            <ul>
-              <li>오늘의 타로</li>
-              <li>이번 주의 타로</li>
-              <li>이 달의 타로</li>
-              <li>올해의 타로</li>
-            </ul>
-          </Dropdown>
-
-          <Link to="/today">
-            <CommonTarot>◆◆의 타로</CommonTarot>
-          </Link>
           <Link to="/question">
             <PersonalTarot>타로 문의</PersonalTarot>
           </Link>
@@ -49,12 +38,13 @@ function Menu() {
 }
 
 const Container = styled.div`
-  border-bottom: 1px solid #555;
+  // border-bottom: 1px solid #555;
+  // 드롭다운이 아래 창을 밀지 않게 만들어야함.
 
   margin: 10px;
 
   width: 60vh;
-  height: 7vh;
+  // height: 7vh;
 
   display: flex;
   align-items: center;

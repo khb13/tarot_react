@@ -1,7 +1,7 @@
 import React from "react";
 
-const Dropdown = (props) => {
+const Dropdownjs = (props) => {
   return <article>{props.visibility && props.children}</article>;
 };
 
-export default Dropdown;
+export default Dropdownjs;

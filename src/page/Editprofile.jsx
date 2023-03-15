@@ -1,28 +1,24 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function Profile() {
-  return (
-    <Container>
-      <Profileback>
-        <form>
-          <ProImg></ProImg>
-          <ProName>닉네임</ProName>
-          <ID>
-            <ProId>아이디</ProId>
-            <ProUserId>예시 아이디</ProUserId>
-          </ID>
-          <Email>
-            <ProEmail>이메일</ProEmail>
-            <ProUserEmail>예시 이메일</ProUserEmail>
-          </Email>
-          <Link to="/editprofile">
-          <ReProfile>프로필 수정</ReProfile>
-          </Link>
-        </form>
-      </Profileback>
-    </Container>
-  );
+
+function Editprofile() {
+    return(<Container>
+        <Profileback>
+          <form>
+            <ProImg></ProImg>
+            <ProName>닉네임</ProName>
+            <ID>
+              <ProId>아이디</ProId>
+              <ProUserId>예시 아이디</ProUserId>
+            </ID>
+            <Email>
+              <ProEmail>이메일</ProEmail>
+              <ProUserEmail>예시 이메일</ProUserEmail>
+            </Email>
+            <ReProfile>프로필 수정</ReProfile>
+          </form>
+        </Profileback>
+      </Container>)
 }
 
 const Container = styled.div`
@@ -121,5 +117,4 @@ const ReProfile = styled.div`
 
   cursor: pointer;
 `;
-
-export default Profile;
+export default Editprofile;
