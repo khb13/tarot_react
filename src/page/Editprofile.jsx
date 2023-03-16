@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -6,16 +7,19 @@ function Editprofile() {
         <Profileback>
           <form>
             <ProImg></ProImg>
-            <ProName>닉네임</ProName>
+            <ProName placeholder="닉네임" type="text"></ProName>
             <ID>
               <ProId>아이디</ProId>
-              <ProUserId>예시 아이디</ProUserId>
+              <ProUserId></ProUserId>
             </ID>
             <Email>
-              <ProEmail>이메일</ProEmail>
-              <ProUserEmail>예시 이메일</ProUserEmail>
+              <ProEmail type="email">이메일</ProEmail>
+              <ProUserEmail></ProUserEmail>
             </Email>
-            <ReProfile>프로필 수정</ReProfile>
+            <Link to="/profile">
+            <ReProfile>수정 완료</ReProfile>
+            </Link>
+            
           </form>
         </Profileback>
       </Container>)
@@ -49,12 +53,12 @@ const ProImg = styled.div`
   border-radius: 50%;
 `;
 
-const ProName = styled.div`
+const ProName = styled.input`
   width: 100px;
-  margin: 10px auto;
+  margin: 40px 0px 20px 10px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  // text-align: center;
   font-weight: bold;
 `;
 
@@ -65,13 +69,13 @@ const Email = styled.div``;
 const ProId = styled.div`
   max-width: 80px;
 
-  margin: 10px;
+  margin: 10px 0px 0px 0px;
   padding: 2px 10px;
 
   font-size: 0.7rem;
 `;
 
-const ProUserId = styled.div`
+const ProUserId = styled.input`
   max-width: 200px;
 
   border-bottom: 1px solid #333;
@@ -85,13 +89,13 @@ const ProUserId = styled.div`
 const ProEmail = styled.div`
   max-width: 80px;
 
-  margin: 10px;
+  margin: 10px 0px 0px 0px;
   padding: 2px 10px;
 
   font-size: 0.7rem;
 `;
 
-const ProUserEmail = styled.div`
+const ProUserEmail = styled.input`
   width: 200px;
   border-bottom: 1px solid #333;
 

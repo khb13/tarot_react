@@ -8,10 +8,10 @@ function Home() {
         <GiOrangeSlice size={100} color="orange" />
       </Logo>
       <ExplainService>
-        <p>서비스 설명</p>
+        <p>오렌지 타로</p>
         <span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-          voluptatem quibusdam recusandae mollitia. Quam, perspiciatis impedit.
+          간단하게, 클릭 몇 번으로 체험해볼 수 있는 온라인 타로.<br />
+          오늘의 타로부터 기타·질문까지도 편하게 볼 수 있습니다.
         </span>
       </ExplainService>
     </Container>

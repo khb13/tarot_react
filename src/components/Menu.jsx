@@ -18,7 +18,7 @@ function Menu() {
         <WrapMenu>
           <TarotButton
             onClick={() => {setView(!view)}}
-          >타로 {" "}
+          >오렌지 타로 {" "}
           {view ? '▲' : '▼'}
           {view && <Dropdown />}
           </TarotButton>
