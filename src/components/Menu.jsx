@@ -17,10 +17,13 @@ function Menu() {
         </Logo>
         <WrapMenu>
           <TarotButton
-            onClick={() => {setView(!view)}}
-          >오렌지 타로 {" "}
-          {view ? '▲' : '▼'}
-          {view && <Dropdown />}
+            onClick={() => {
+              setView(!view);
+            }}
+          >
+            <OrangeTarot>오렌지 타로 {view ? "▲" : "▼"}</OrangeTarot>
+
+            <TarotDrop>{view && <Dropdown />}</TarotDrop>
           </TarotButton>
           <Link to="/question">
             <PersonalTarot>타로 문의</PersonalTarot>
@@ -73,43 +76,31 @@ const WrapMenu = styled.div`
 
 const TarotButton = styled.div`
   margin-right: 20px;
-  color: black;
+`;
 
+const OrangeTarot = styled.div`
   :hover {
     color: #aaa;
   }
 `;
 
-const CommonTarot = styled.li`
-  margin-right: 20px;
-  color: black;
-
-  :hover {
-    color: #aaa;
-  }
-`;
+const TarotDrop = styled.div``;
 
 const PersonalTarot = styled.li`
   margin-right: 20px;
-  color: black;
-
   :hover {
     color: #aaa;
   }
 `;
 
 const QuesAns = styled.li`
-  color: black;
   margin-right: 20px;
-
   :hover {
     color: #aaa;
   }
 `;
 
 const Login = styled.li`
-  color: black;
-
   :hover {
     color: #aaa;
   }

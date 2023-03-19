@@ -12,7 +12,9 @@ function Login() {
             <br />
             <input placeholder="비밀번호" type="password"></input>
           </LoginTarot>
-          <LoginButton>로그인</LoginButton>
+          <Link to="/profile">
+            <LoginButton>로그인</LoginButton>
+          </Link>
 
           <LoginOption>
             <LinkOption>
@@ -32,7 +34,7 @@ function Login() {
 }
 
 const Container = styled.div`
-  // display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -41,7 +43,7 @@ const Container = styled.div`
 
 const LoginSheet = styled.div`
   width: 50vh;
-  height: 28vh;
+  height: 30vh;
 
   background-color: #eee;
   color: black;
@@ -52,7 +54,7 @@ const LoginSheet = styled.div`
     margin-top: 10px;
   }
 
-  margin: 0px auto
+  /* margin: 0px auto; */
 `;
 
 const LoginTarot = styled.div`
@@ -87,8 +89,8 @@ const LoginButton = styled.div`
 `;
 
 const LoginOption = styled.div`
-  margin: auto;
-  max-width: 25vh;
+  margin: 0px auto;
+  max-width: 27vh;
 `;
 
 const LinkOption = styled.span`
