@@ -17,7 +17,7 @@ function Profile() {
             <ProUserEmail>예시 이메일</ProUserEmail>
           </Email>
           <Link to="/editprofile">
-          <ReProfile>프로필 수정</ReProfile>
+            <ReProfile>프로필 수정</ReProfile>
           </Link>
         </form>
       </Profileback>
@@ -26,7 +26,7 @@ function Profile() {
 }
 
 const Container = styled.div`
-  background-color: #eee;
+  background-color: #fef5d4;
   margin: auto;
 
   /* display: flex; */

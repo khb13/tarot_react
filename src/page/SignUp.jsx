@@ -32,7 +32,7 @@ const SignSheet = styled.div`
   width: 50vh;
   height: 40vh;
 
-  background-color: #eee;
+  background-color: #fef5d4;
   color: black;
 
   form {

@@ -47,7 +47,7 @@ const Container = styled.div`
   margin: 0px 10px;
 
   width: 60vh;
-  height: 7vh;
+  height: 6vh;
 
   display: flex;
   align-items: center;
@@ -84,6 +84,7 @@ const OrangeTarot = styled.div`
   :hover {
     color: white;
   }
+  cursor: pointer;
 `;
 
 const TarotDrop = styled.div``;

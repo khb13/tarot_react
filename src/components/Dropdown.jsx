@@ -27,9 +27,7 @@ const HoverTarot = styled.li`
   :hover {
     color: white;
   }
-
   border-top: 1px solid white;
-  
 `;
 
 export default Dropdown;

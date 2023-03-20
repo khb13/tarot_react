@@ -17,7 +17,7 @@ function FindId() {
 }
 
 const Container = styled.div`
-  background-color: #eee;
+  background-color: #fef5d4;
   margin: auto;
 
   justify-content: center;

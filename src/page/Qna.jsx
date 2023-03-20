@@ -20,7 +20,7 @@ function Qna() {
 }
 
 const Container = styled.div`
-  background-color: #eee;
+  background-color: #fef5d4;
   width: 50vh;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@ const InfoQna = styled.div`
   }
 
   font-size: 0.7rem;
-  padding: 5px;
+  padding: 8px;
 `;
 
 const QnaForm = styled.form`

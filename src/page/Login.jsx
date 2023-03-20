@@ -49,7 +49,7 @@ const LoginSheet = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: #eee;
+  background-color: #fef5d4;
   color: black;
 
   form {
@@ -99,6 +99,8 @@ const LoginOption = styled.div`
   max-width: 40vh;
 
   margin: 0px auto;
+
+  user-select: none;
 `;
 
 const LinkOption = styled.span`
@@ -106,6 +108,7 @@ const LinkOption = styled.span`
     margin-left: 10px;
   }
   max-width: 10vh;
+  width: 10vh;
 
   text-align: center;
   justify-content: center;

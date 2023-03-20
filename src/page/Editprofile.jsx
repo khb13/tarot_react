@@ -1,32 +1,32 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
 function Editprofile() {
-    return(<Container>
-        <Profileback>
-          <form>
-            <ProImg></ProImg>
-            <ProName placeholder="닉네임" type="text"></ProName>
-            <ID>
-              <ProId>아이디</ProId>
-              <ProUserId></ProUserId>
-            </ID>
-            <Email>
-              <ProEmail type="email">이메일</ProEmail>
-              <ProUserEmail></ProUserEmail>
-            </Email>
-            <Link to="/profile">
+  return (
+    <Container>
+      <Profileback>
+        <form>
+          <ProImg></ProImg>
+          <ProName placeholder="닉네임" type="text"></ProName>
+          <ID>
+            <ProId>아이디</ProId>
+            <ProUserId></ProUserId>
+          </ID>
+          <Email>
+            <ProEmail type="email">이메일</ProEmail>
+            <ProUserEmail></ProUserEmail>
+          </Email>
+          <Link to="/profile">
             <ReProfile>수정 완료</ReProfile>
-            </Link>
-            
-          </form>
-        </Profileback>
-      </Container>)
+          </Link>
+        </form>
+      </Profileback>
+    </Container>
+  );
 }
 
 const Container = styled.div`
-  background-color: #eee;
+  background-color: #fef5d4;
   margin: auto;
 
   /* display: flex; */

@@ -6,8 +6,7 @@ function Ques() {
       <InfoTarot>
         <span>타로 문의 사용법</span>
         <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-        voluptatem quibusdam recusandae mollitia. Quam, perspiciatis impedit.
+        자세한 타로 문의는 타로 종류와 제목을
       </InfoTarot>
       <QuesForm name="Tarot_Ques" method="post">
         <InputData>
@@ -31,7 +30,7 @@ function Ques() {
 }
 
 const Container = styled.div`
-  background-color: #eee;
+  background-color: #fef5d4;
   margin: auto;
 
   /* display: flex; */

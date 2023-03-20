@@ -7,16 +7,14 @@ function Today() {
     <Container>
       <TarotPlate>
         <InfoTarot>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-          voluptatem quibusdam recusandae mollitia. Quam, perspiciatis impedit.
+          오늘 하루의 운세에 대한 카드를 뽑을 수 있습니다. 아래의 카드를
+          눌러주세요!
         </InfoTarot>
 
         <Link to="../result">
-          {/* <div onClick={() => changeTarot()}> */}
           <TarotButton>
             <InButton>Select</InButton>
           </TarotButton>
-          {/* </div> */}
         </Link>
       </TarotPlate>
     </Container>
@@ -35,7 +33,7 @@ const TarotPlate = styled.div`
   width: 50vh;
   height: 60vh;
 
-  background-color: #eee;
+  background-color: #fef5d4;
   color: black;
 `;
 
@@ -55,11 +53,11 @@ const TarotButton = styled.div`
   height: 30vh;
   border-radius: 5%;
   border: 3px solid #fff;
-  background-color: #ddd;
+  background-color: #f2ab39;
 
   user-select: none;
 
-  box-shadow: 5px 5px grey;
+  box-shadow: 5px 5px #7f6cdc;
 `;
 
 const InButton = styled.div`
