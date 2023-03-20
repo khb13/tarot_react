@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const HoverTarot = styled.li`
   :hover {
-    color: #aaa;
+    color: white;
   }
 
   border-top: 1px solid white;
