@@ -34,16 +34,20 @@ function Login() {
 }
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
 
-  margin-top: 15vh;
+  margin: 15vh auto;
+
+  // width: 50vh;
 `;
 
 const LoginSheet = styled.div`
   width: 50vh;
-  height: 30vh;
+  height: 40vh;
+
+  justify-content: center;
+  align-items: center;
 
   background-color: #eee;
   color: black;
@@ -54,7 +58,9 @@ const LoginSheet = styled.div`
     margin-top: 10px;
   }
 
-  /* margin: 0px auto; */
+  margin: 0px auto;
+
+  padding: 20px;
 `;
 
 const LoginTarot = styled.div`
@@ -89,8 +95,10 @@ const LoginButton = styled.div`
 `;
 
 const LoginOption = styled.div`
+  width: 40vh;
+  max-width: 40vh;
+
   margin: 0px auto;
-  max-width: 27vh;
 `;
 
 const LinkOption = styled.span`

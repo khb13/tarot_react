@@ -18,12 +18,18 @@ function Dropdown() {
 
 const Container = styled.div`
   position: absolute;
+  background-color: #f2ab39;
+  width: 14vh;
+  padding: 2px;
 `;
 
 const HoverTarot = styled.li`
   :hover {
     color: #aaa;
   }
+
+  border-top: 1px solid white;
+  
 `;
 
 export default Dropdown;

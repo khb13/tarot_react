@@ -12,7 +12,7 @@ function Menu() {
       <NavWrapper>
         <Logo>
           <Link to="/home">
-            <GiOrangeSlice size={30} color="orange" />
+            <GiOrangeSlice size={30} color="white" />
           </Link>
         </Logo>
         <WrapMenu>
@@ -41,17 +41,19 @@ function Menu() {
 }
 
 const Container = styled.div`
-  // border-bottom: 1px solid #555;
+  border-bottom: 1px solid #fff;
   // 드롭다운이 아래 창을 밀지 않게 만들어야함.
 
-  margin: 10px;
+  margin: 0px 10px;
 
   width: 60vh;
-  // height: 7vh;
+  height: 7vh;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  background-color: #f2ab39;
 `;
 
 const NavWrapper = styled.ul`
@@ -80,7 +82,7 @@ const TarotButton = styled.div`
 
 const OrangeTarot = styled.div`
   :hover {
-    color: #aaa;
+    color: white;
   }
 `;
 
@@ -89,20 +91,20 @@ const TarotDrop = styled.div``;
 const PersonalTarot = styled.li`
   margin-right: 20px;
   :hover {
-    color: #aaa;
+    color: white;
   }
 `;
 
 const QuesAns = styled.li`
   margin-right: 20px;
   :hover {
-    color: #aaa;
+    color: white;
   }
 `;
 
 const Login = styled.li`
   :hover {
-    color: #aaa;
+    color: white;
   }
 `;
 

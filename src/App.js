@@ -18,7 +18,8 @@ function App() {
     <Container>
       <Wrapper>
         <Menu />
-        <Routes>
+        <MainPlate>
+          <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="today" element={<Today />} />
@@ -32,6 +33,7 @@ function App() {
           <Route path="findpass" element={<FindPass />} />
           <Route path="editprofile" element={<Editprofile />} />
         </Routes>
+        </MainPlate>
       </Wrapper>
     </Container>
   );
@@ -47,6 +49,8 @@ const Container = styled.div`
   border: 1px solid #eee;
 
   margin: 0px auto;
+
+  background-color: #e4b660;
 `;
 
 const Wrapper = styled.div`
@@ -55,4 +59,8 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const MainPlate = styled.div`
+
+margin-top: 20px;
+`
 export default App;
