@@ -4,10 +4,9 @@ function Qna() {
   return (
     <Container>
       <InfoQna>
-        <span>설명</span>
+        <span>문의하기</span>
         <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-        voluptatem quibusdam recusandae mollitia. Quam, perspiciatis impedit.
+        기타 문의 사항에 대해서는 해당 페이지로 제출해주십시오.
       </InfoQna>
       <QnaForm>
         <QnaTitle placeholder="문의 제목"></QnaTitle>
@@ -25,6 +24,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
+  border-radius: 2%;
 `;
 
 const InfoQna = styled.div`

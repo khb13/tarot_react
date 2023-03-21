@@ -36,6 +36,8 @@ const Container = styled.div`
   width: 60vh;
 
   padding: 8px;
+
+  border-radius: 2%;
 `;
 
 const Profileback = styled.div``;

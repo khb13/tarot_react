@@ -14,7 +14,7 @@ function Editprofile() {
           </ID>
           <Email>
             <ProEmail type="email">이메일</ProEmail>
-            <ProUserEmail></ProUserEmail>
+            <ProUserEmail type="email"></ProUserEmail>
           </Email>
           <Link to="/profile">
             <ReProfile>수정 완료</ReProfile>
@@ -29,13 +29,14 @@ const Container = styled.div`
   background-color: #fef5d4;
   margin: auto;
 
-  /* display: flex; */
+  //display: flex;
   justify-content: center;
   align-items: center;
 
   width: 60vh;
 
   padding: 8px;
+  border-radius: 2%;
 `;
 
 const Profileback = styled.div``;
@@ -54,6 +55,7 @@ const ProImg = styled.div`
 `;
 
 const ProName = styled.input`
+  // display: flex;
   width: 100px;
   margin: 40px 0px 20px 10px;
   justify-content: center;

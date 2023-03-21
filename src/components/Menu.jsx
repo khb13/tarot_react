@@ -22,17 +22,16 @@ function Menu() {
             }}
           >
             <OrangeTarot>오렌지 타로 {view ? "▲" : "▼"}</OrangeTarot>
-
             <TarotDrop>{view && <Dropdown />}</TarotDrop>
           </TarotButton>
           <Link to="/question">
-            <PersonalTarot>타로 문의</PersonalTarot>
+            <OrangeTarot>타로 문의</OrangeTarot>
           </Link>
           <Link to="/qna">
-            <QuesAns>기타·질문</QuesAns>
+            <OrangeTarot>기타·질문</OrangeTarot>
           </Link>
           <Link to="/login">
-            <Login>로그인</Login>
+            <OrangeTarot>로그인</OrangeTarot>
           </Link>
         </WrapMenu>
       </NavWrapper>
@@ -41,19 +40,17 @@ function Menu() {
 }
 
 const Container = styled.div`
-  border-bottom: 1px solid #fff;
-  // 드롭다운이 아래 창을 밀지 않게 만들어야함.
-
-  margin: 0px 10px;
-
-  width: 60vh;
-  height: 6vh;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
 
+  width: 60vh;
+  height: 6vh;
+
+  margin: 0px 10px;
+
   background-color: #f2ab39;
+  border-bottom: 1px solid #fff;
 `;
 
 const NavWrapper = styled.ul`
@@ -63,50 +60,28 @@ const NavWrapper = styled.ul`
   justify-content: space-around;
 `;
 
-const Logo = styled.li`
-  margin-right: 20px;
-`;
+const Logo = styled.div``;
 
 const WrapMenu = styled.div`
-  padding-top: 5px;
   display: flex;
+
+  padding: 5px 0;
 
   font-size: 0.9rem;
   font-weight: bold;
-  padding-bottom: 5px;
 `;
 
-const TarotButton = styled.div`
-  margin-right: 20px;
-`;
+const TarotButton = styled.div``;
 
 const OrangeTarot = styled.div`
+  margin-left: 20px;
+  cursor: pointer;
+
   :hover {
     color: white;
   }
-  cursor: pointer;
 `;
 
 const TarotDrop = styled.div``;
-
-const PersonalTarot = styled.li`
-  margin-right: 20px;
-  :hover {
-    color: white;
-  }
-`;
-
-const QuesAns = styled.li`
-  margin-right: 20px;
-  :hover {
-    color: white;
-  }
-`;
-
-const Login = styled.li`
-  :hover {
-    color: white;
-  }
-`;
 
 export default Menu;

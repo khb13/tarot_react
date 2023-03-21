@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function Today() {
@@ -35,6 +35,8 @@ const TarotPlate = styled.div`
 
   background-color: #fef5d4;
   color: black;
+
+  border-radius: 2%;
 `;
 
 const InfoTarot = styled.div`

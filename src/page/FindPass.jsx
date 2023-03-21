@@ -27,6 +27,7 @@ const Container = styled.div`
 
   padding: 8px;
   margin-top: 15vh;
+  border-radius: 2%;
 `;
 
 const FindPassSheet = styled.div`

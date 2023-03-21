@@ -6,7 +6,8 @@ function Ques() {
       <InfoTarot>
         <span>타로 문의 사용법</span>
         <br />
-        자세한 타로 문의는 타로 종류와 제목을
+        자세한 타로 문의는 타로 종류와 내용을 따로 기재하여 보내주시면 확인 후
+        프로필로 등록 되어있는 메일로 결과를 보내드립니다.
       </InfoTarot>
       <QuesForm name="Tarot_Ques" method="post">
         <InputData>
@@ -33,13 +34,13 @@ const Container = styled.div`
   background-color: #fef5d4;
   margin: auto;
 
-  /* display: flex; */
   justify-content: center;
   align-items: center;
 
   width: 50vh;
 
   padding: 8px;
+  border-radius: 2%;
 `;
 
 const InfoTarot = styled.div`

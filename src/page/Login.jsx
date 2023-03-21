@@ -61,6 +61,7 @@ const LoginSheet = styled.div`
   margin: 0px auto;
 
   padding: 20px;
+  border-radius: 2%;
 `;
 
 const LoginTarot = styled.div`

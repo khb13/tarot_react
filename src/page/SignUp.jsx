@@ -40,6 +40,8 @@ const SignSheet = styled.div`
     padding: 5px;
     margin-top: 10px;
   }
+
+  border-radius: 2%;
 `;
 
 const SignUpTarot = styled.div`
