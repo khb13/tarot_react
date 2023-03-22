@@ -24,7 +24,6 @@ function Today() {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
 
   margin-top: 20px;
 `;
@@ -34,7 +33,6 @@ const TarotPlate = styled.div`
   height: 60vh;
 
   background-color: #fef5d4;
-  color: black;
 
   border-radius: 2%;
 `;
@@ -42,24 +40,27 @@ const TarotPlate = styled.div`
 const InfoTarot = styled.div`
   width: 46vh;
 
-  font-size: 0.7rem;
+  padding: 20px;
+  margin: auto;
 
-  padding: 10px;
+  font-size: 0.7rem;
 `;
 
 const TarotButton = styled.div`
-  margin: auto;
   text-align: center;
 
   width: 20vh;
   height: 30vh;
+
+  margin: 20px auto 0;
+
   border-radius: 5%;
   border: 3px solid #fff;
+
   background-color: #f2ab39;
+  box-shadow: 5px 5px #7f6cdc;
 
   user-select: none;
-
-  box-shadow: 5px 5px #7f6cdc;
 `;
 
 const InButton = styled.div`
@@ -67,7 +68,6 @@ const InButton = styled.div`
   margin: auto;
 
   font-size: 1.2rem;
-
   font-weight: bold;
   color: white;
 

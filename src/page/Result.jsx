@@ -139,29 +139,27 @@ function Result() {
 }
 
 const Container = styled.div`
-  justify-content: center;
-  align-items: center;
-
   width: 60vh;
   height: 80vh;
+
   margin: auto;
 
   user-select: none;
 `;
 
 const Header = styled.div`
-  margin: 20px;
+  margin: 25px;
   padding: 5px;
-  margin-top: 4vh;
 `;
 
 const TarotButton = styled.div`
-  margin: auto;
   text-align: center;
-  margin-top: 2vh;
 
   width: 20vh;
   height: 30vh;
+
+  margin: 4vh auto 0;
+
   border-radius: 5%;
   border: 3px solid #fff;
   background-color: #f2ab39;
@@ -180,26 +178,23 @@ const InButton = styled.div`
   margin: auto;
 
   font-size: 1.2rem;
-
   font-weight: bold;
   color: white;
 `;
 
 const CardKeyword = styled.div`
-  width: 60vh;
-  margin-top: 2vh;
-
   text-align: center;
-  margin-bottom: 2vh;
+
+  width: 60vh;
+  margin: 2vh 0;
 
   font-size: 0.8rem;
 `;
 
 const ChangeButton = styled.div`
-  margin-top: 2vh;
   text-align: center;
 
-  margin: auto;
+  margin: 2vh auto 0;
 
   width: 10vh;
   height: 5vh;
@@ -213,6 +208,5 @@ const ReText = styled.div`
   font-size: 0.8rem;
 
   font-weight: bold;
-  color: black;
 `;
 export default Result;

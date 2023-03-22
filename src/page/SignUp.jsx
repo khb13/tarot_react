@@ -33,19 +33,20 @@ const SignSheet = styled.div`
   height: 40vh;
 
   background-color: #fef5d4;
-  color: black;
+
+  border-radius: 2%;
 
   form {
     font-size: 0.8rem;
     padding: 5px;
     margin-top: 10px;
   }
-
-  border-radius: 2%;
 `;
 
 const SignUpTarot = styled.div`
   text-align: center;
+
+  margin-bottom: 20px;
 
   h3 {
     margin: 20px 0px;
@@ -57,20 +58,17 @@ const SignUpTarot = styled.div`
     width: 40vh;
     height: 3vh;
   }
-
-  margin-bottom: 20px;
 `;
 
 const SignUpButton = styled.div`
-  border: 1px solid #ddd;
+  text-align: center;
   max-width: 10vh;
 
-  margin: auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  padding: 2px;
 
   background-color: white;
-  text-align: center;
-  padding: 2px;
+  border: 1px solid #ddd;
 
   cursor: pointer;
 `;

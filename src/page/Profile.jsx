@@ -26,16 +26,12 @@ function Profile() {
 }
 
 const Container = styled.div`
-  background-color: #fef5d4;
-  margin: auto;
-
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-
   width: 60vh;
 
+  margin: auto;
   padding: 8px;
+
+  background-color: #fef5d4;
 
   border-radius: 2%;
 `;
@@ -46,8 +42,6 @@ const ProImg = styled.div`
   width: 20vh;
   height: 20vh;
 
-  justify-content: center;
-  align-items: center;
   margin: 20px auto;
 
   background-color: orange;
@@ -56,11 +50,10 @@ const ProImg = styled.div`
 `;
 
 const ProName = styled.div`
+  text-align: center;
   width: 100px;
   margin: 10px auto;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
   font-weight: bold;
 `;
 
@@ -99,26 +92,27 @@ const ProEmail = styled.div`
 
 const ProUserEmail = styled.div`
   width: 200px;
-  border-bottom: 1px solid #333;
 
   margin: 10px;
   padding: 2px 10px;
+
+  border-bottom: 1px solid #333;
 
   font-size: 0.7rem;
 `;
 
 const ReProfile = styled.div`
-  font-size: 0.8rem;
-  background-color: #fff;
-  max-width: 100px;
-
   text-align: center;
+
+  max-width: 100px;
 
   padding: 2px;
   margin: 30px auto;
 
-  border: 2px solid #ddd;
+  font-size: 0.8rem;
+  background-color: #fff;
 
+  border: 2px solid #ddd;
   border-radius: 15%;
 
   cursor: pointer;

@@ -20,19 +20,19 @@ function App() {
         <Menu />
         <MainPlate>
           <Routes>
-          <Route path="/*" element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="today" element={<Today />} />
-          <Route path="result" element={<Result />} />
-          <Route path="/question" element={<Ques />} />
-          <Route path="/qna" element={<Qna />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="findid" element={<FindId />} />
-          <Route path="findpass" element={<FindPass />} />
-          <Route path="editprofile" element={<Editprofile />} />
-        </Routes>
+            <Route path="/*" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="today" element={<Today />} />
+            <Route path="result" element={<Result />} />
+            <Route path="/question" element={<Ques />} />
+            <Route path="/qna" element={<Qna />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="findid" element={<FindId />} />
+            <Route path="findpass" element={<FindPass />} />
+            <Route path="editprofile" element={<Editprofile />} />
+          </Routes>
         </MainPlate>
       </Wrapper>
     </Container>
@@ -42,7 +42,6 @@ function App() {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 
   width: 60vh;
   height: 100vh;
@@ -60,7 +59,6 @@ const Wrapper = styled.div`
 `;
 
 const MainPlate = styled.div`
-
-margin-top: 20px;
-`
+  margin-top: 20px;
+`;
 export default App;

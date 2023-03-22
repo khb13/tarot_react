@@ -31,36 +31,33 @@ function Ques() {
 }
 
 const Container = styled.div`
-  background-color: #fef5d4;
-  margin: auto;
-
-  justify-content: center;
-  align-items: center;
-
   width: 50vh;
 
+  margin: auto;
   padding: 8px;
+
+  background-color: #fef5d4;
+
   border-radius: 2%;
 `;
 
 const InfoTarot = styled.div`
   width: 46vh;
 
+  margin: 0px auto;
+
+  font-size: 0.7rem;
+
   span {
     font-size: 0.8rem;
     font-weight: bold;
   }
-
-  font-size: 0.7rem;
 `;
 
 const QuesForm = styled.form`
-  padding: 5px;
-
   width: 50vh;
-  justify-content: center;
-  align-items: center;
 
+  padding: 5px;
   margin: 0px auto;
 `;
 

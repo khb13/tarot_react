@@ -19,24 +19,26 @@ function Qna() {
 }
 
 const Container = styled.div`
-  background-color: #fef5d4;
   width: 50vh;
-  justify-content: center;
-  align-items: center;
   margin: auto;
+
+  background-color: #fef5d4;
+
   border-radius: 2%;
 `;
 
 const InfoQna = styled.div`
-  width: 46vh;
+  width: 48vh;
+
+  padding: 8px;
+  margin: 0px auto;
+
+  font-size: 0.7rem;
 
   span {
     font-size: 0.8rem;
     font-weight: bold;
   }
-
-  font-size: 0.7rem;
-  padding: 8px;
 `;
 
 const QnaForm = styled.form`
@@ -45,42 +47,50 @@ const QnaForm = styled.form`
 `;
 
 const QnaTitle = styled.input`
-  border: none;
   max-width: 40vh;
   width: 35vh;
+
   margin-right: 10px;
   padding: 3px 5px;
+
+  border: 1px solid #999;
+  border-radius: 5%;
 `;
 
 const QnaCustomer = styled.input`
-  border: none;
   max-width: 10vh;
-  color: #777;
-
   padding: 3px 5px;
+
+  border: 1px solid #999;
+  border-radius: 10%;
+
+  color: #777;
 `;
 
 const QnaText = styled.textarea`
-  border: none;
-
   width: 47vh;
   height: 50vh;
+
   margin-top: 10px;
+  padding: 5px;
+
+  border: 1px solid #999;
+  border-radius: 2%;
 
   font-size: 0.8rem;
-
-  padding: 5px;
 `;
 
 const QnaSubmit = styled.div`
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15%;
-
-  font-size: 0.8rem;
   text-align: center;
 
   width: 5vh;
+
+  background-color: white;
+
+  border: 1px solid #999;
+  border-radius: 15%;
+
+  font-size: 0.8rem;
 
   :hover {
     cursor: pointer;
