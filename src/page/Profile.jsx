@@ -34,6 +34,8 @@ const Container = styled.div`
   background-color: #fef5d4;
 
   border-radius: 2%;
+
+  box-shadow: 0px 5px #7f6cdc;
 `;
 
 const Profileback = styled.div``;

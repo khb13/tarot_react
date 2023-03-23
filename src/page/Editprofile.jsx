@@ -7,18 +7,32 @@ function Editprofile() {
       <Profileback>
         <form>
           <ProImg></ProImg>
-          <ProName placeholder="닉네임" type="text"></ProName>
-          <ID>
-            <ProId>아이디</ProId>
-            <ProUserId></ProUserId>
-          </ID>
-          <Email>
-            <ProEmail type="email">이메일</ProEmail>
-            <ProUserEmail type="email"></ProUserEmail>
-          </Email>
-          <Link to="/profile">
-            <ReProfile>수정 완료</ReProfile>
-          </Link>
+          <ProName
+            placeholder="닉네임"
+            type="text"
+            name="NicName"
+            maxLength={10}
+            required
+            autoFocus
+          ></ProName>
+          <ProTitle>
+            <ProLabel>아이디</ProLabel>
+            <ProUserInput type="text" name="id" required></ProUserInput>
+          </ProTitle>
+          <ProTitle>
+            <ProLabel>이메일</ProLabel>
+            <ProUserInput type="email"></ProUserInput>
+          </ProTitle>
+          <ProTitle>
+            <ProLabel>비밀번호</ProLabel>
+            <ProUserInput type="password"></ProUserInput>
+            <ProLabel>비밀번호 확인</ProLabel>
+            <ProUserInput type="password"></ProUserInput>
+          </ProTitle>
+
+          <ReProfile type="submit">
+            <Link to="/profile">수정 완료</Link>
+          </ReProfile>
         </form>
       </Profileback>
     </Container>
@@ -34,6 +48,8 @@ const Container = styled.div`
   background-color: #fef5d4;
 
   border-radius: 2%;
+
+  box-shadow: 0px 5px #7f6cdc;
 `;
 
 const Profileback = styled.div``;
@@ -57,54 +73,34 @@ const ProName = styled.input`
   font-weight: bold;
 `;
 
-const ID = styled.div``;
+const ProTitle = styled.div``;
 
-const Email = styled.div``;
-
-const ProId = styled.div`
-  max-width: 80px;
-
-  margin: 10px 0px 0px 0px;
-  padding: 2px 10px;
-
-  font-size: 0.7rem;
-`;
-
-const ProUserId = styled.input`
-  max-width: 200px;
-
-  margin: 10px;
-  padding: 2px 10px;
-
-  border-bottom: 1px solid #333;
-
-  font-size: 0.7rem;
-`;
-
-const ProEmail = styled.div`
-  max-width: 80px;
-
-  margin: 10px 0px 0px 0px;
-  padding: 2px 10px;
-
-  font-size: 0.7rem;
-`;
-
-const ProUserEmail = styled.input`
-  width: 200px;
-
-  margin: 10px;
-  padding: 2px 10px;
-
-  border-bottom: 1px solid #333;
-
-  font-size: 0.7rem;
-`;
-
-const ReProfile = styled.div`
-  text-align: center;
-
+const ProLabel = styled.div`
   max-width: 100px;
+
+  padding: 2px 10px;
+
+  font-size: 0.7rem;
+`;
+
+const ProUserInput = styled.input`
+  max-width: 250px;
+  width: 250px;
+
+  margin: 10px;
+  padding: 2px 10px;
+
+  border-bottom: 1px solid #333;
+
+  font-size: 0.7rem;
+`;
+
+const ReProfile = styled.button`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  width: 80px;
 
   font-size: 0.8rem;
   background-color: #fff;

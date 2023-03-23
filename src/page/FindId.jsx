@@ -6,9 +6,9 @@ function FindId() {
       <FindIdSheet>
         <FindIdTitle>아이디 찾기</FindIdTitle>
         <FindIdForm>
-          <input placeholder="이름" type="text"></input>
-          <input placeholder="이메일" type="email"></input>
-          <FindIdButton>제출</FindIdButton>
+          <input placeholder="이름" type="text" name="name"></input>
+          <input placeholder="이메일" type="email" name="email"></input>
+          <FindIdButton type="submit">제출</FindIdButton>
         </FindIdForm>
       </FindIdSheet>
     </Container>
@@ -24,6 +24,8 @@ const Container = styled.div`
   background-color: #fef5d4;
 
   border-radius: 2%;
+
+  box-shadow: 5px 5px #7f6cdc;
 `;
 
 const FindIdSheet = styled.div`
@@ -50,7 +52,9 @@ const FindIdForm = styled.form`
   }
 `;
 
-const FindIdButton = styled.div`
+const FindIdButton = styled.button`
+  display: flex;
+  justify-content: center;
   text-align: center;
   width: 40px;
   margin: 20px auto;

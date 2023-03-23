@@ -21,13 +21,17 @@ const Container = styled.div`
   background-color: #f2ab39;
   width: 14vh;
   padding: 2px;
+  margin: 13px 10px 10px 8px;
 `;
 
 const HoverTarot = styled.li`
   :hover {
     color: white;
+    background-color: #db802a;
   }
   border-top: 1px solid white;
+  padding: 3px;
+  text-align: center;
 `;
 
 export default Dropdown;

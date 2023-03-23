@@ -39,6 +39,8 @@ const Container = styled.div`
   background-color: #fef5d4;
 
   border-radius: 2%;
+
+  box-shadow: 5px 5px #7f6cdc;
 `;
 
 const InfoTarot = styled.div`
@@ -69,12 +71,18 @@ const TypeSelect = styled.select`
   border: none;
   padding-right: 5px;
   margin-right: 5px;
+
+  border: 1px solid #999;
+  border-radius: 5%;
 `;
 
 const LocalDate = styled.input`
   border: none;
   max-width: 20vh;
   margin-right: 5px;
+
+  border: 1px solid #999;
+  border-radius: 5%;
 `;
 
 const UserName = styled.input`
@@ -83,6 +91,9 @@ const UserName = styled.input`
 
   color: #aaa;
   font-size: 0.8rem;
+
+  border: 1px solid #999;
+  border-radius: 5%;
 `;
 
 const QuesTitle = styled.input`
@@ -90,6 +101,9 @@ const QuesTitle = styled.input`
   border: none;
   margin-top: 5px;
   padding: 3px;
+
+  border: 1px solid #999;
+  border-radius: 5%;
 `;
 
 const QuesInput = styled.textarea`
@@ -101,12 +115,15 @@ const QuesInput = styled.textarea`
   padding: 5px;
   margin-top: 5px;
 
+  border: 1px solid #999;
+  border-radius: 2%;
+
   clear: clear;
 `;
 
 const SubButton = styled.div`
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #999;
   border-radius: 15%;
 
   font-size: 0.8rem;

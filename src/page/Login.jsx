@@ -47,6 +47,7 @@ const LoginSheet = styled.div`
   padding: 20px;
 
   border-radius: 2%;
+  box-shadow: 5px 5px #7f6cdc;
 
   form {
     font-size: 0.8rem;
