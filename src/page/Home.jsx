@@ -5,7 +5,7 @@ function Home() {
   return (
     <Container>
       <Logo>
-        <GiOrangeSlice size={100} color="#e4b660" />
+        <GiOrangeSlice size={100} color="#ffffff" />
       </Logo>
       <ExplainService>
         <p>오렌지 타로</p>
