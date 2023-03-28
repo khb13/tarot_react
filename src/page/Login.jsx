@@ -8,13 +8,13 @@ function Login() {
         <form>
           <LoginTarot>
             <h3>로그인</h3>
-            <input placeholder="아이디"></input>
-            <br />
-            <input placeholder="비밀번호" type="password"></input>
+            <input placeholder="아이디" required></input>
+            <input placeholder="비밀번호" type="password" required></input>
+
+            <LoginButton type="submit">
+              <Link to="/profile">로그인</Link>
+            </LoginButton>
           </LoginTarot>
-          <Link to="/profile">
-            <LoginButton>로그인</LoginButton>
-          </Link>
 
           <LoginOption>
             <LinkOption>
@@ -72,14 +72,16 @@ const LoginTarot = styled.div`
   }
 `;
 
-const LoginButton = styled.div`
+const LoginButton = styled.button`
   border: 1px solid #ddd;
   max-width: 7vh;
 
-  margin: auto;
-  margin-bottom: 10px;
+  margin: 30px auto;
 
+  display: flex;
+  justify-content: center;
   background-color: white;
+
   text-align: center;
   padding: 2px;
 

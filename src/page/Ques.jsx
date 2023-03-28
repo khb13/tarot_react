@@ -20,11 +20,16 @@ function Ques() {
             <option label="기타" />
           </TypeSelect>
           <LocalDate type="datetime-local" />
-          <UserName type="input" readOnly value={"유저 닉네임"}></UserName>
+          <UserName
+            type="text"
+            readOnly
+            value={"유저 닉네임"}
+            required
+          ></UserName>
         </InputData>
-        <QuesTitle type="input" placeholder="제목" />
-        <QuesInput type="input" placeholder="내용 입력" />
-        <SubButton>제출</SubButton>
+        <QuesTitle type="text" placeholder="제목" required />
+        <QuesInput type="textarea" placeholder="내용 입력" required />
+        <SubButton type="submit">제출</SubButton>
       </QuesForm>
     </Container>
   );
@@ -121,7 +126,7 @@ const QuesInput = styled.textarea`
   clear: clear;
 `;
 
-const SubButton = styled.div`
+const SubButton = styled.button`
   background-color: white;
   border: 1px solid #999;
   border-radius: 15%;

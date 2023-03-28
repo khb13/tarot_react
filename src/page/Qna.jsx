@@ -9,10 +9,16 @@ function Qna() {
         기타 문의 사항에 대해서는 해당 페이지로 제출해주십시오.
       </InfoQna>
       <QnaForm>
-        <QnaTitle placeholder="문의 제목"></QnaTitle>
-        <QnaCustomer type="input" readOnly value={"유저 닉네임"}></QnaCustomer>
-        <QnaText placeholder="문의 내용"></QnaText>
-        <QnaSubmit>제출</QnaSubmit>
+        <QnaTitle placeholder="문의 제목" type="text" required></QnaTitle>
+        <QnaCustomer
+          type="text"
+          readOnly
+          value={"유저 닉네임"}
+          required
+          //유저 닉네임은 자동으로 받아올 수 있도록 함.
+        ></QnaCustomer>
+        <QnaText placeholder="문의 내용" type="textarea" required></QnaText>
+        <QnaSubmit type="submit">제출</QnaSubmit>
       </QnaForm>
     </Container>
   );
@@ -82,7 +88,7 @@ const QnaText = styled.textarea`
   font-size: 0.8rem;
 `;
 
-const QnaSubmit = styled.div`
+const QnaSubmit = styled.button`
   text-align: center;
 
   width: 5vh;

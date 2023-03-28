@@ -5,7 +5,12 @@ function Home() {
   return (
     <Container>
       <Logo>
-        <GiOrangeSlice size={100} color="#ffffff" />
+        <GiOrangeSlice
+          size={100}
+          color="white"
+          onMouseOver={({ target }) => (target.style.color = "#FA520D")}
+          onMouseOut={({ target }) => (target.style.color = "white")}
+        />
       </Logo>
       <ExplainService>
         <p>오렌지 타로</p>

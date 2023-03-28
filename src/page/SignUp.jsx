@@ -7,13 +7,33 @@ function SignUp() {
         <form>
           <SignUpTarot>
             <h3>회원가입</h3>
-            <input placeholder="닉네임"></input>
-            <input placeholder="이메일" type="email"></input>
-            <input placeholder="아이디"></input>
-            <input placeholder="비밀번호" type="password"></input>
-            <input placeholder="비밀번호 확인" type="password"></input>
+            <input
+              placeholder="닉네임"
+              type="text"
+              name="nick"
+              required
+            ></input>
+            <input
+              placeholder="이메일"
+              type="email"
+              name="email"
+              required
+            ></input>
+            <input placeholder="아이디" type="text" name="id" required></input>
+            <input
+              placeholder="비밀번호"
+              type="password"
+              name="pass"
+              required
+            ></input>
+            <input
+              placeholder="비밀번호 확인"
+              type="password"
+              name="copass"
+              required
+            ></input>
           </SignUpTarot>
-          <SignUpButton>회원가입</SignUpButton>
+          <SignUpButton type="submit">회원가입</SignUpButton>
         </form>
       </SignSheet>
     </Container>
@@ -62,7 +82,9 @@ const SignUpTarot = styled.div`
   }
 `;
 
-const SignUpButton = styled.div`
+const SignUpButton = styled.button`
+  display: flex;
+  justify-content: center;
   text-align: center;
   max-width: 10vh;
 

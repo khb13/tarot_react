@@ -12,7 +12,12 @@ function Menu() {
       <NavWrapper>
         <Logo>
           <Link to="/home">
-            <GiOrangeSlice size={30} color="white" />
+            <GiOrangeSlice
+              size={30}
+              color="white"
+              onMouseOver={({ target }) => (target.style.color = "#FA520D")}
+              onMouseOut={({ target }) => (target.style.color = "white")}
+            />
           </Link>
         </Logo>
         <WrapMenu>

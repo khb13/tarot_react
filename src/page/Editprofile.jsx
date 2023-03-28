@@ -21,13 +21,13 @@ function Editprofile() {
           </ProTitle>
           <ProTitle>
             <ProLabel>이메일</ProLabel>
-            <ProUserInput type="email"></ProUserInput>
+            <ProUserInput type="email" name="email"></ProUserInput>
           </ProTitle>
           <ProTitle>
             <ProLabel>비밀번호</ProLabel>
-            <ProUserInput type="password"></ProUserInput>
+            <ProUserInput type="password" name="pass"></ProUserInput>
             <ProLabel>비밀번호 확인</ProLabel>
-            <ProUserInput type="password"></ProUserInput>
+            <ProUserInput type="password" name="copass"></ProUserInput>
           </ProTitle>
 
           <ReProfile type="submit">

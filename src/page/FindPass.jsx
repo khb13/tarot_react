@@ -6,10 +6,15 @@ function FindPass() {
       <FindPassSheet>
         <FindPassTitle>비밀번호 찾기</FindPassTitle>
         <FindPassForm>
-          <input placeholder="아이디"></input>
+          <input placeholder="아이디" type="text" name="id" required></input>
           <br />
-          <input placeholder="이메일"></input>
-          <FindPassButton>제출</FindPassButton>
+          <input
+            placeholder="이메일"
+            type="email"
+            name="email"
+            required
+          ></input>
+          <FindPassButton type="submit">제출</FindPassButton>
         </FindPassForm>
       </FindPassSheet>
     </Container>
@@ -53,7 +58,9 @@ const FindPassForm = styled.form`
   }
 `;
 
-const FindPassButton = styled.div`
+const FindPassButton = styled.button`
+  display: flex;
+  justify-content: center;
   text-align: center;
   width: 40px;
   margin: 20px auto;

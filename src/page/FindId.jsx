@@ -6,8 +6,13 @@ function FindId() {
       <FindIdSheet>
         <FindIdTitle>아이디 찾기</FindIdTitle>
         <FindIdForm>
-          <input placeholder="이름" type="text" name="name"></input>
-          <input placeholder="이메일" type="email" name="email"></input>
+          <input placeholder="이름" type="text" name="name" required></input>
+          <input
+            placeholder="이메일"
+            type="email"
+            name="email"
+            required
+          ></input>
           <FindIdButton type="submit">제출</FindIdButton>
         </FindIdForm>
       </FindIdSheet>
