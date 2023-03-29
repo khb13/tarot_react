@@ -40,6 +40,7 @@ const Container = styled.div`
 const LoginSheet = styled.div`
   width: 50vh;
   height: 40vh;
+  position: relative;
 
   background-color: #fef5d4;
 
@@ -53,6 +54,9 @@ const LoginSheet = styled.div`
     font-size: 0.8rem;
     padding: 5px;
     margin-top: 10px;
+    margin: auto;
+    max-width: 50vh;
+    max-height: 40vh;
   }
 `;
 

@@ -33,7 +33,7 @@ function Menu() {
             <OrangeTarot>타로 문의</OrangeTarot>
           </Link>
           <Link to="/qna">
-            <OrangeTarot>기타·질문</OrangeTarot>
+            <OrangeTarot> 기타·질문</OrangeTarot>
           </Link>
           <Link to="/login">
             <OrangeTarot>로그인</OrangeTarot>
