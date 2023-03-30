@@ -1,24 +1,28 @@
 import styled from "styled-components";
 import { GiOrangeSlice } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 
 function Menu() {
   const [view, setView] = useState(false);
 
+  const activeStyle = {
+    color: "orange",
+  };
+
   return (
     <Container>
       <NavWrapper>
         <Logo>
-          <Link to="/home">
+          <NavLink to="/home" activeStyle={activeStyle}>
             <GiOrangeSlice
               size={30}
               color="white"
               onMouseOver={({ target }) => (target.style.color = "#FA520D")}
               onMouseOut={({ target }) => (target.style.color = "white")}
             />
-          </Link>
+          </NavLink>
         </Logo>
         <WrapMenu>
           <TarotButton
@@ -29,15 +33,15 @@ function Menu() {
             <OrangeTarot>오렌지 타로 {view ? "▲" : "▼"}</OrangeTarot>
             <TarotDrop>{view && <Dropdown />}</TarotDrop>
           </TarotButton>
-          <Link to="/question">
+          <NavLink to="/question" activeStyle={activeStyle}>
             <OrangeTarot>타로 문의</OrangeTarot>
-          </Link>
-          <Link to="/qna">
+          </NavLink>
+          <NavLink to="/qna" activeStyle={activeStyle}>
             <OrangeTarot> 기타·질문</OrangeTarot>
-          </Link>
-          <Link to="/login">
+          </NavLink>
+          <NavLink to="/login" activeStyle={activeStyle}>
             <OrangeTarot>로그인</OrangeTarot>
-          </Link>
+          </NavLink>
         </WrapMenu>
       </NavWrapper>
     </Container>

@@ -63,8 +63,6 @@ const LoginSheet = styled.div`
 const LoginTarot = styled.div`
   text-align: center;
 
-  margin-bottom: 10px;
-
   h3 {
     margin: 20px 0px;
     user-select: none;
@@ -73,6 +71,7 @@ const LoginTarot = styled.div`
   input {
     margin: 5px;
     width: 40vh;
+    height: 3vh;
   }
 `;
 

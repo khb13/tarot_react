@@ -68,7 +68,7 @@ const SignSheet = styled.div`
 const SignUpTarot = styled.div`
   text-align: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   h3 {
     margin: 20px 0px;
