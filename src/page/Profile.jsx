@@ -33,6 +33,9 @@ const Container = styled.div`
 
   background-color: #fef5d4;
 
+  box-sizing: border-box;
+  border: 10px solid #f2ab39;
+
   border-radius: 2%;
 
   box-shadow: 0px 5px #7f6cdc;
@@ -44,7 +47,7 @@ const ProImg = styled.div`
   width: 20vh;
   height: 20vh;
 
-  margin: 20px auto;
+  margin: 60px auto 20px;
 
   background-color: orange;
 
@@ -54,7 +57,7 @@ const ProImg = styled.div`
 const ProName = styled.div`
   text-align: center;
   width: 100px;
-  margin: 10px auto;
+  margin: 10px auto 60px;
 
   font-weight: bold;
 `;

@@ -6,7 +6,15 @@ function Editprofile() {
     <Container>
       <Profileback>
         <form>
-          <ProImg></ProImg>
+          <ProImg>
+            <EditProImg
+              type="file"
+              id="proimg"
+              name="proimg"
+              accept="image/*"
+              onChange="loadFile(this)"
+            ></EditProImg>
+          </ProImg>
           <ProName
             placeholder="닉네임"
             type="text"
@@ -47,6 +55,8 @@ const Container = styled.div`
 
   background-color: #fef5d4;
 
+  box-sizing: border-box;
+  border: 10px solid #f2ab39;
   border-radius: 2%;
 
   box-shadow: 0px 5px #7f6cdc;
@@ -63,6 +73,19 @@ const ProImg = styled.div`
   background-color: orange;
 
   border-radius: 50%;
+`;
+
+const EditProImg = styled.input`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  content-align: center;
+
+  font-size: 0.5rem;
+  width: 60px;
+  height: 60px;
+
+  margin: 20px auto;
 `;
 
 const ProName = styled.input`
