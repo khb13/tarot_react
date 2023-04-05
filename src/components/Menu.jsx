@@ -12,7 +12,13 @@ function Menu() {
   };
 
   return (
-    <Container>
+    <Container
+      onClick={() => {
+        if (view === true) {
+          setView(view == !view);
+        }
+      }}
+    >
       <NavWrapper>
         <Logo>
           <NavLink to="/home" activeStyle={activeStyle}>

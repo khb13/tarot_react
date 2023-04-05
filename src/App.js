@@ -12,10 +12,17 @@ import Ques from "./page/Ques";
 import Result from "./page/Result";
 import SignUp from "./page/SignUp";
 import Today from "./page/Today";
+import { view, setView } from "./components/Menu";
 
 function App() {
   return (
-    <Container>
+    <Container
+      onClick={({ view, setView }) => {
+        if (view === true) {
+          setView(view == !view);
+        }
+      }}
+    >
       <Wrapper>
         <Menu />
         <MainPlate>
