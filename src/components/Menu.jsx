@@ -21,7 +21,12 @@ function Menu() {
     >
       <NavWrapper>
         <Logo>
-          <NavLink to="/home" activeStyle={activeStyle}>
+          <NavLink
+            to="/home"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "black",
+            })}
+          >
             <GiOrangeSlice
               size={30}
               color="white"
@@ -39,13 +44,30 @@ function Menu() {
             <OrangeTarot>오렌지 타로 {view ? "▲" : "▼"}</OrangeTarot>
             <TarotDrop>{view && <Dropdown />}</TarotDrop>
           </TarotButton>
-          <NavLink to="/question" activeStyle={activeStyle}>
+
+          <NavLink
+            to="/question"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "black",
+            })}
+          >
             <OrangeTarot>타로 문의</OrangeTarot>
           </NavLink>
-          <NavLink to="/qna" activeStyle={activeStyle}>
+
+          <NavLink
+            to="/qna"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "black",
+            })}
+          >
             <OrangeTarot> 기타·질문</OrangeTarot>
           </NavLink>
-          <NavLink to="/login" activeStyle={activeStyle}>
+          <NavLink
+            to="/login"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "black",
+            })}
+          >
             <OrangeTarot>로그인</OrangeTarot>
           </NavLink>
         </WrapMenu>
