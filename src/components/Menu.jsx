@@ -116,6 +116,7 @@ const OrangeTarot = styled.div`
 
   :hover {
     color: white;
+    transition: all 0.4s ease-out;
   }
 `;
 

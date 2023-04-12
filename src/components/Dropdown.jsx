@@ -28,6 +28,7 @@ const HoverTarot = styled.li`
   :hover {
     color: white;
     background-color: #db802a;
+    transition: all 0.5s ease-out;
   }
   border-top: 1px solid white;
   padding: 3px;
