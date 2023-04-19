@@ -8,7 +8,9 @@ function Dropdown() {
         <HoverTarot>
           <Link to="/today">오늘의 타로</Link>
         </HoverTarot>
-        <HoverTarot>이 주의 타로</HoverTarot>
+        <HoverTarot>
+          <Link to="/week">이 주의 타로</Link>
+        </HoverTarot>
         <HoverTarot>이 달의 타로</HoverTarot>
         <HoverTarot>올해의 타로</HoverTarot>
       </ul>
