@@ -14,7 +14,9 @@ function Dropdown() {
         <HoverTarot>
           <Link to="/month">이 달의 타로</Link>
         </HoverTarot>
-        <HoverTarot>올해의 타로</HoverTarot>
+        <HoverTarot>
+          <Link to="/year">올해의 타로</Link>
+        </HoverTarot>
       </ul>
     </Container>
   );
