@@ -5,6 +5,7 @@ function Week() {
     <Container>
       <TarotPlate>
         <TarotLine>
+          {/*for문으로 해결되나? */}
           <TarotCard></TarotCard>
           <Between></Between>
           <TarotCard></TarotCard>
@@ -69,7 +70,6 @@ const TarotLine = styled.div`
 
   flex-direction: row;
 
-  background-color: #ddd;
   float: left;
 
   position: relative;

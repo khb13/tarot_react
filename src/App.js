@@ -14,6 +14,7 @@ import SignUp from "./page/SignUp";
 import Today from "./page/Today";
 import { view, setView } from "./components/Menu";
 import Week from "./page/Week";
+import Month from "./page/Month";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="today" element={<Today />} />
             <Route path="week" element={<Week />} />
+            <Route path="month" element={<Month />} />
             <Route path="result" element={<Result />} />
             <Route path="/question" element={<Ques />} />
             <Route path="/qna" element={<Qna />} />

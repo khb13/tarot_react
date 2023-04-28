@@ -7,10 +7,6 @@ import { useState } from "react";
 function Menu() {
   const [view, setView] = useState(false);
 
-  const activeStyle = {
-    color: "orange",
-  };
-
   return (
     <Container
       onClick={() => {
