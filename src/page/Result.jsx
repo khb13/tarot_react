@@ -123,28 +123,39 @@ function Result() {
 
   return (
     <Container>
-      <Header>
-        <TarotButton>
-          <InButton>{tarotResult.title}</InButton>
-        </TarotButton>
-      </Header>
-      <TarotTitle>{tarotResult.kotitle}</TarotTitle>
-      <CardKeyword>{tarotResult.keyword}</CardKeyword>
-      <ChangeButton onClick={() => changeTarot()}>
-        <VscDebugRestart size={30} color="black" />
-        <ReText>다시뽑기</ReText>
-      </ChangeButton>
+      <TarotPlate>
+        <Header>
+          <TarotButton>
+            <InButton>{tarotResult.title}</InButton>
+          </TarotButton>
+        </Header>
+        <TarotTitle>{tarotResult.kotitle}</TarotTitle>
+        <CardKeyword>{tarotResult.keyword}</CardKeyword>
+        <ChangeButton onClick={() => changeTarot()}>
+          <VscDebugRestart size={30} color="black" />
+          <ReText>다시뽑기</ReText>
+        </ChangeButton>
+      </TarotPlate>
     </Container>
   );
 }
 
 const Container = styled.div`
-  width: 60vh;
+  width: 50vh;
   height: 80vh;
 
   margin: auto;
 
   user-select: none;
+`;
+
+const TarotPlate = styled.div`
+  width: 50vh;
+  height: 60vh;
+
+  background-color: #fef5d4;
+
+  border-radius: 2%;
 `;
 
 const Header = styled.div`
@@ -185,7 +196,7 @@ const InButton = styled.div`
 const CardKeyword = styled.div`
   text-align: center;
 
-  width: 60vh;
+  width: 50vh;
   margin: 2vh 0;
 
   font-size: 0.8rem;
