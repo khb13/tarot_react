@@ -21,9 +21,9 @@ function FindId() {
 }
 
 const Container = styled.div`
-  width: 50vh;
+  width: 350px;
 
-  margin: 15vh auto;
+  margin: 100px auto;
   padding: 8px;
 
   background-color: #fef5d4;
@@ -48,7 +48,7 @@ const FindIdForm = styled.form`
   margin: 20px;
 
   input {
-    width: 40vh;
+    width: 280px;
 
     margin: 5px;
     padding: 2px;

@@ -48,7 +48,7 @@ function Editprofile() {
 }
 
 const Container = styled.div`
-  width: 60vh;
+  width: 380px;
 
   margin: auto;
   padding: 8px;
@@ -65,10 +65,10 @@ const Container = styled.div`
 const Profileback = styled.div``;
 
 const ProImg = styled.div`
-  width: 20vh;
-  height: 20vh;
+  width: 130px;
+  height: 130px;
 
-  margin: 20px auto;
+  margin: 20px auto 10px;
 
   background-color: orange;
 

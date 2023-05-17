@@ -32,7 +32,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  margin-top: 35vh;
+  margin-top: 240px;
 `;
 
 const ExplainService = styled.div`
