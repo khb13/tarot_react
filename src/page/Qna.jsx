@@ -25,7 +25,7 @@ function Qna() {
 }
 
 const Container = styled.div`
-  width: 50vh;
+  width: 400px;
   margin: auto;
 
   background-color: #fef5d4;
@@ -36,7 +36,7 @@ const Container = styled.div`
 `;
 
 const InfoQna = styled.div`
-  width: 48vh;
+  width: 380px;
 
   padding: 8px;
   margin: 0px auto;
@@ -50,13 +50,13 @@ const InfoQna = styled.div`
 `;
 
 const QnaForm = styled.form`
-  width: 50vh;
+  width: 400px;
   padding: 10px;
 `;
 
 const QnaTitle = styled.input`
-  max-width: 40vh;
-  width: 35vh;
+  max-width: 320px;
+  width: 280px;
 
   margin-right: 10px;
   padding: 3px 5px;
@@ -66,7 +66,7 @@ const QnaTitle = styled.input`
 `;
 
 const QnaCustomer = styled.input`
-  max-width: 10vh;
+  max-width: 76px;
   padding: 3px 5px;
 
   border: 1px solid #999;
@@ -76,8 +76,8 @@ const QnaCustomer = styled.input`
 `;
 
 const QnaText = styled.textarea`
-  width: 47vh;
-  height: 50vh;
+  width: 366px;
+  height: 400px;
 
   margin-top: 10px;
   padding: 5px;
@@ -91,7 +91,7 @@ const QnaText = styled.textarea`
 const QnaSubmit = styled.button`
   text-align: center;
 
-  width: 5vh;
+  width: 40px;
 
   background-color: white;
 
