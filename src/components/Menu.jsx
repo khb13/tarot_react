@@ -1,17 +1,37 @@
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import { GiOrangeSlice } from "react-icons/gi";
-import { NavLink, Route } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { GiOrangeSlice } from "react-icons/gi";
 
-function Menu() {
-  const [view, setView] = useState(false);
+const Menu = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <Container
+      ref={dropdownRef}
       onClick={() => {
-        if (view === true) {
-          setView(view == !view);
+        if (dropdownOpen === true) {
+          setDropdownOpen(dropdownOpen == !dropdownOpen);
         }
       }}
     >
@@ -32,14 +52,22 @@ function Menu() {
           </NavLink>
         </Logo>
         <WrapMenu>
-          <TarotButton
-            onClick={() => {
-              setView(!view);
-            }}
+          <Button
+            open={dropdownOpen}
+            onClick={toggleDropdown}
+            style={({ dropdownOpen }) => ({
+              color: dropdownOpen ? "white" : "black",
+            })}
           >
-            <OrangeTarot>오렌지 타로 {view ? "▲" : "▼"}</OrangeTarot>
-            <TarotDrop>{view && <Dropdown />}</TarotDrop>
-          </TarotButton>
+            오렌지 타로 {dropdownOpen ? "▲" : "▼"}
+          </Button>
+          {dropdownOpen && (
+            <DropdownContent open={dropdownOpen}>
+              <TarotDrop>
+                <Dropdown />
+              </TarotDrop>
+            </DropdownContent>
+          )}
 
           <NavLink
             to="/question"
@@ -47,16 +75,15 @@ function Menu() {
               color: isActive ? "white" : "black",
             })}
           >
-            <OrangeTarot>타로 문의</OrangeTarot>
+            <Button2>타로 문의</Button2>
           </NavLink>
-
           <NavLink
             to="/qna"
             style={({ isActive }) => ({
               color: isActive ? "white" : "black",
             })}
           >
-            <OrangeTarot> 기타·질문</OrangeTarot>
+            <Button2>기타·질문</Button2>
           </NavLink>
           <NavLink
             to="/login"
@@ -64,21 +91,22 @@ function Menu() {
               color: isActive ? "white" : "black",
             })}
           >
-            <OrangeTarot>로그인</OrangeTarot>
+            <Button2>로그인</Button2>
           </NavLink>
         </WrapMenu>
       </NavWrapper>
     </Container>
   );
-}
+};
 
 const Container = styled.div`
-  display: flex;
+  position: relative;
+  display: inline-block;
   align-items: center;
   justify-content: space-around;
 
-  width: 60vh;
-  height: 6vh;
+  width: 467px;
+  height: 35px;
 
   margin: 0px 10px;
 
@@ -89,11 +117,13 @@ const Container = styled.div`
 const NavWrapper = styled.ul`
   display: flex;
   list-style: none;
-
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  margin: 0px 10px;
+`;
 
 const WrapMenu = styled.div`
   display: flex;
@@ -104,11 +134,29 @@ const WrapMenu = styled.div`
   font-weight: bold;
 `;
 
-const TarotButton = styled.div``;
-
-const OrangeTarot = styled.div`
-  margin-left: 20px;
+const Button = styled.div`
+  margin: 0px 10px;
   cursor: pointer;
+  width: 100px;
+
+  text-align: center;
+  justify-content: center;
+
+  color: ${({ open }) => (open ? "#ffffff" : "#000000")};
+
+  :hover {
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+`;
+
+const Button2 = styled.div`
+  margin: 0px 10px;
+  cursor: pointer;
+  width: 80px;
+
+  text-align: center;
+  justify-content: center;
 
   :hover {
     color: white;
@@ -117,5 +165,13 @@ const OrangeTarot = styled.div`
 `;
 
 const TarotDrop = styled.div``;
+
+const DropdownContent = styled.div`
+  position: absolute;
+  top: 30%;
+  display: ${({ open }) => (open ? "block" : "none")};
+  // min-width: 160px;
+  padding: 8px;
+`;
 
 export default Menu;
