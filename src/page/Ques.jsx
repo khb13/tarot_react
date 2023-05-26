@@ -49,7 +49,7 @@ const Container = styled.div`
 `;
 
 const InfoTarot = styled.div`
-  width: 46vh;
+  width: 380px;
 
   margin: 0px auto;
 
@@ -62,14 +62,14 @@ const InfoTarot = styled.div`
 `;
 
 const QuesForm = styled.form`
-  width: 50vh;
+  width: 400px;
 
   padding: 5px;
   margin: 0px auto;
 `;
 
 const InputData = styled.div`
-  max-height: 3vh;
+  max-height: 22px;
 `;
 
 const TypeSelect = styled.select`
@@ -83,7 +83,7 @@ const TypeSelect = styled.select`
 
 const LocalDate = styled.input`
   border: none;
-  max-width: 20vh;
+  max-width: 162px;
   margin-right: 5px;
 
   border: 1px solid #999;
@@ -91,7 +91,7 @@ const LocalDate = styled.input`
 `;
 
 const UserName = styled.input`
-  width: 15vh;
+  width: 118px;
   border: none;
 
   color: #aaa;
@@ -102,7 +102,7 @@ const UserName = styled.input`
 `;
 
 const QuesTitle = styled.input`
-  width: 46vh;
+  width: 358px;
   border: none;
   margin-top: 5px;
   padding: 3px;
@@ -112,8 +112,8 @@ const QuesTitle = styled.input`
 `;
 
 const QuesInput = styled.textarea`
-  width: 46vh;
-  height: 40vh;
+  width: 358px;
+  height: 370px;
   border: none;
   overflow: auto;
 
@@ -134,7 +134,7 @@ const SubButton = styled.button`
   font-size: 0.8rem;
   text-align: center;
 
-  width: 5vh;
+  width: 40px;
 
   :hover {
     cursor: pointer;

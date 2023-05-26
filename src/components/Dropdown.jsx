@@ -25,7 +25,7 @@ function Dropdown() {
 const Container = styled.div`
   position: absolute;
   background-color: #f2ab39;
-  width: 14vh;
+  width: 100px;
   padding: 2px;
   margin: 13px 10px 10px 8px;
 `;

@@ -7,8 +7,7 @@ function Month() {
     <Container>
       <TarotPlate>
         <InfoTarot>
-          오늘 하루의 운세에 대한 카드를 뽑을 수 있습니다. 아래의 카드를
-          눌러주세요!
+          이 달의 운세에 대한 카드를 뽑을 수 있습니다. 아래의 카드를 눌러주세요!
         </InfoTarot>
 
         <Link to="../result">
@@ -29,8 +28,8 @@ const Container = styled.div`
 `;
 
 const TarotPlate = styled.div`
-  width: 50vh;
-  height: 60vh;
+  width: 360px;
+  height: 420px;
 
   background-color: #fef5d4;
 
@@ -38,7 +37,7 @@ const TarotPlate = styled.div`
 `;
 
 const InfoTarot = styled.div`
-  width: 46vh;
+  width: 340px;
 
   padding: 20px;
   margin: auto;
@@ -49,8 +48,8 @@ const InfoTarot = styled.div`
 const TarotButton = styled.div`
   text-align: center;
 
-  width: 20vh;
-  height: 30vh;
+  width: 140px;
+  height: 210px;
 
   margin: 20px auto 0;
 
@@ -64,7 +63,7 @@ const TarotButton = styled.div`
 `;
 
 const InButton = styled.div`
-  padding-top: 13vh;
+  padding-top: 86px;
   margin: auto;
 
   font-size: 1.2rem;

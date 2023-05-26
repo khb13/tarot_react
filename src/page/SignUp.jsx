@@ -49,8 +49,8 @@ const Container = styled.div`
 `;
 
 const SignSheet = styled.div`
-  width: 50vh;
-  height: 40vh;
+  width: 400px;
+  height: 330px;
 
   background-color: #fef5d4;
 
@@ -77,8 +77,8 @@ const SignUpTarot = styled.div`
   }
   input {
     margin: 5px;
-    width: 40vh;
-    height: 3vh;
+    width: 350px;
+    height: 25px;
   }
 `;
 
@@ -86,7 +86,7 @@ const SignUpButton = styled.button`
   display: flex;
   justify-content: center;
   text-align: center;
-  max-width: 10vh;
+  max-width: 80px;
 
   margin: 0 auto 10px;
   padding: 2px;

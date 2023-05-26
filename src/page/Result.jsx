@@ -123,28 +123,39 @@ function Result() {
 
   return (
     <Container>
-      <Header>
-        <TarotButton>
-          <InButton>{tarotResult.title}</InButton>
-        </TarotButton>
-      </Header>
-      <TarotTitle>{tarotResult.kotitle}</TarotTitle>
-      <CardKeyword>{tarotResult.keyword}</CardKeyword>
-      <ChangeButton onClick={() => changeTarot()}>
-        <VscDebugRestart size={30} color="black" />
-        <ReText>다시뽑기</ReText>
-      </ChangeButton>
+      <TarotPlate>
+        <Header>
+          <TarotButton>
+            <InButton>{tarotResult.title}</InButton>
+          </TarotButton>
+        </Header>
+        <TarotTitle>{tarotResult.kotitle}</TarotTitle>
+        <CardKeyword>{tarotResult.keyword}</CardKeyword>
+        <ChangeButton onClick={() => changeTarot()}>
+          <VscDebugRestart size={30} color="black" />
+          <ReText>다시뽑기</ReText>
+        </ChangeButton>
+      </TarotPlate>
     </Container>
   );
 }
 
 const Container = styled.div`
-  width: 60vh;
-  height: 80vh;
+  width: 350px;
+  height: 600px;
 
   margin: auto;
 
   user-select: none;
+`;
+
+const TarotPlate = styled.div`
+  width: 350px;
+  height: 500px;
+
+  background-color: #fef5d4;
+
+  border-radius: 2%;
 `;
 
 const Header = styled.div`
@@ -155,10 +166,10 @@ const Header = styled.div`
 const TarotButton = styled.div`
   text-align: center;
 
-  width: 20vh;
-  height: 30vh;
+  width: 140px;
+  height: 210px;
 
-  margin: 4vh auto 0;
+  margin: 30px auto 0;
 
   border-radius: 5%;
   border: 3px solid #fff;
@@ -174,7 +185,7 @@ const TarotTitle = styled.div`
 `;
 
 const InButton = styled.div`
-  padding-top: 13vh;
+  padding-top: 90px;
   margin: auto;
 
   font-size: 1.2rem;
@@ -185,8 +196,8 @@ const InButton = styled.div`
 const CardKeyword = styled.div`
   text-align: center;
 
-  width: 60vh;
-  margin: 2vh 0;
+  width: 300px;
+  margin: 20px auto;
 
   font-size: 0.8rem;
 `;
@@ -194,10 +205,10 @@ const CardKeyword = styled.div`
 const ChangeButton = styled.div`
   text-align: center;
 
-  margin: 2vh auto 0;
+  margin: 10px auto 0;
 
-  width: 10vh;
-  height: 5vh;
+  width: 60px;
+  height: 60px;
 
   border-bottom: 1px solid black;
 
