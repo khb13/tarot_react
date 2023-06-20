@@ -1,21 +1,53 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Login() {
+  let [id, setId] = useState("");
+  let [pw, setPw] = useState("");
+
+  const [button, setButton] = useState(true);
+
+  function changeButton() {
+    id.length >= 5 && pw.length >= 5 ? setButton(false) : setButton(true);
+  }
+
   return (
     <Container>
       <LoginSheet>
         <form>
           <LoginTarot>
             <h3>로그인</h3>
-            <input placeholder="아이디" required></input>
-            <input placeholder="비밀번호" type="password" required></input>
+            <input
+              placeholder="아이디"
+              id="id"
+              className="login"
+              required
+              onChange={(e) => {
+                setId(e.target.value);
+              }}
+              onKeyUp={changeButton}
+            ></input>
+            <input
+              placeholder="비밀번호"
+              type="password"
+              id="password"
+              className="login"
+              required
+              onChange={(e) => {
+                setPw(e.target.value);
+              }}
+              onKeyUp={changeButton}
+            ></input>
 
-            <LoginButton type="submit">
-              <Link to="/profile">로그인</Link>
+            <LoginButton
+              type="button"
+              className="loginButton"
+              disabled={button}
+            >
+              {button ? <p>로그인</p> : <Link to="/profile">로그인</Link>}
             </LoginButton>
           </LoginTarot>
-
           <LoginOption>
             <LinkOption>
               <Link to="/signup">회원가입</Link>

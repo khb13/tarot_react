@@ -27,7 +27,7 @@ const Container = styled.div`
   background-color: #f2ab39;
   width: 100px;
   padding: 2px;
-  margin: 13px 10px 10px 8px;
+  margin: 13px 10px 10px 0px;
 `;
 
 const HoverTarot = styled.li`

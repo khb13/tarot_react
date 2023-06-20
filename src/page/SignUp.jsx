@@ -1,6 +1,16 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 function SignUp() {
+  let [id, setId] = useState("");
+  let [pw, setPw] = useState("");
+
+  const [button, setButton] = useState(true);
+
+  function changeButton() {
+    id.length >= 5 && pw.length >= 5 ? setButton(false) : setButton(true);
+  }
+
   return (
     <Container>
       <SignSheet>
