@@ -1,14 +1,28 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function SignUp() {
-  let [id, setId] = useState("");
-  let [pw, setPw] = useState("");
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+  const [email, setEmail] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [pwcheck, setPwCheck] = useState("");
 
   const [button, setButton] = useState(true);
 
   function changeButton() {
-    id.length >= 5 && pw.length >= 5 ? setButton(false) : setButton(true);
+    if (
+      id.length !== 0 &&
+      nickname.length !== 0 &&
+      email.length !== 0 &&
+      pw.length !== 0 &&
+      pwcheck.length !== 0 &&
+      pw === pwcheck
+    ) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
   }
 
   return (
@@ -19,31 +33,63 @@ function SignUp() {
             <h3>회원가입</h3>
             <input
               placeholder="닉네임"
+              id="nickname"
               type="text"
               name="nick"
               required
+              onChange={(e) => {
+                setNickname(e.target.value);
+              }}
+              onKeyUp={changeButton}
             ></input>
             <input
               placeholder="이메일"
+              id="email"
               type="email"
               name="email"
               required
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              onKeyUp={changeButton}
             ></input>
-            <input placeholder="아이디" type="text" name="id" required></input>
+            <input
+              placeholder="아이디"
+              id="id"
+              type="text"
+              name="id"
+              required
+              onChange={(e) => {
+                setId(e.target.value);
+              }}
+              onKeyUp={changeButton}
+            ></input>
             <input
               placeholder="비밀번호"
+              id="pw"
               type="password"
               name="pass"
               required
+              onChange={(e) => {
+                setPw(e.target.value);
+              }}
+              onKeyUp={changeButton}
             ></input>
             <input
               placeholder="비밀번호 확인"
+              id="pwcheck"
               type="password"
               name="copass"
               required
+              onChange={(e) => {
+                setPwCheck(e.target.value);
+              }}
+              onKeyUp={changeButton}
             ></input>
           </SignUpTarot>
-          <SignUpButton type="submit">회원가입</SignUpButton>
+          <SignUpButton type="submit" className="signButton" disabled={button}>
+            회원가입
+          </SignUpButton>
         </form>
       </SignSheet>
     </Container>
