@@ -1,13 +1,32 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 function Week() {
+  // const [rpTarot, setRpTarot] = useState();
+
+  // function repeattarot(rpTarot){
+  //   var arr = [];
+  //   for(var i =0; i<12; i++){
+
+  //     arr.push(
+  //     <TarotCard></TarotCard>
+  //           <Between></Between>
+  //     )
+
+  //   }
+
+  //   return arr;
+  // }
+
   return (
     <Container>
       <TarotPlate>
         <TarotLine>
           {/*for문으로 해결되나? */}
-          <TarotCard></TarotCard>
-          <Between></Between>
+          {/* {for(int i=0;i=11;i++){
+            
+          }} */}
+
           <TarotCard></TarotCard>
           <Between></Between>
           <TarotCard></TarotCard>
