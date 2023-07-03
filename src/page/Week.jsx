@@ -2,61 +2,23 @@ import { useState } from "react";
 import styled from "styled-components";
 
 function Week() {
-  // const [rpTarot, setRpTarot] = useState();
-
-  // function repeattarot(rpTarot){
-  //   var arr = [];
-  //   for(var i =0; i<12; i++){
-
-  //     arr.push(
-  //     <TarotCard></TarotCard>
-  //           <Between></Between>
-  //     )
-
-  //   }
-
-  //   return arr;
-  // }
-
   return (
     <Container>
       <TarotPlate>
-        <TarotLine>
-          {/*for문으로 해결되나? */}
-          {/* {for(int i=0;i=11;i++){
-            
-          }} */}
-
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-          <Between></Between>
-          <TarotCard></TarotCard>
-        </TarotLine>
-        <TarotLine>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-          <TarotCard></TarotCard>
-        </TarotLine>
+        <TarotLineTop>
+          {[...Array(12)].map((_, index) => (
+            <TarotCard key={index} index={index}>
+              카드 {index + 1}
+            </TarotCard>
+          ))}
+        </TarotLineTop>
+        <TarotLineBottom>
+          {[...Array(12)].map((_, index) => (
+            <TarotCard key={index + 12} index={index + 12}>
+              카드 {index + 13}
+            </TarotCard>
+          ))}
+        </TarotLineBottom>
       </TarotPlate>
     </Container>
   );
@@ -65,63 +27,56 @@ function Week() {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-
   margin-top: 20px;
 `;
 
 const TarotPlate = styled.div`
-  width: 50vh;
-  height: 60vh;
+  width: 360px;
+  height: 420px;
 
   background-color: #fef5d4;
 
   border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const TarotLine = styled.div`
-  width: 24vh;
-  height: 60vh;
-
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
-  margin: 0px auto;
-
-  flex-direction: row;
-
-  float: left;
-
   position: relative;
+`;
+
+const TarotLineTop = styled(TarotLine)`
+  width: 50%;
+`;
+
+const TarotLineBottom = styled(TarotLine)`
+  width: 50%;
 `;
 
 const TarotCard = styled.div`
   text-align: center;
-
-  width: 12vh;
-  height: 8vh;
-
-  margin: 20px auto 0;
-
+  width: 15vh;
+  height: 10vh;
+  margin: 0 2vh;
   border-radius: 5%;
   border: 3px solid #fff;
-
   background-color: #f2ab39;
   box-shadow: 3px 3px #7f6cdc;
-
   position: absolute;
-
   user-select: none;
+  cursor: pointer;
+  bottom: ${(props) =>
+    5 * props.index}vh; /* 아래로 스프레드되도록 bottom 값 설정 */
+  transition: transform 0.2s ease;
 
-  &+&: {
+  &:hover {
+    transform: translateX(10px);
   }
 `;
 
-const Between = styled.div`
-  width: 12vh;
-  height: 2vh;
-
-  position: absolute;
-
-  background-color: #000;
-`;
 export default Week;
